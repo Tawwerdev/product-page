@@ -1,0 +1,309 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Hero section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.wheels-alive.co.uk/wp-content/uploads/2024/07/Kia-Picanto-MY25-action-front-oside.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.tagline {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Car highlights section */
+.car-highlights {
+    padding: 3rem 2rem;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.price-tag {
+    margin-bottom: 2rem;
+}
+
+.price-tag h2 {
+    font-size: 3rem;
+    color: #2c3e50;
+}
+
+.price-tag span {
+    color: #666;
+}
+
+.key-specs {
+    display: flex;
+    justify-content: space-around;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.spec {
+    padding: 1rem;
+}
+
+.spec-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.spec-label {
+    color: #666;
+}
+
+/* Gallery section */
+.gallery {
+    padding: 2rem;
+    background-color: white;
+}
+
+.main-image {
+    width: 100%;
+    max-width: 800px; /* Reduced from 1000px */
+    margin: 0 auto 1rem;
+    height: 500px; /* Fixed height */
+    overflow: hidden;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.thumbnails {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 800px; /* Match main image width */
+    margin: 0 auto;
+}
+
+.thumbnails img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.thumbnails img.active {
+    border: 2px solid #2c3e50;
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Features section */
+.features {
+    padding: 3rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature {
+    text-align: center;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover i {
+    transform: scale(1.1);
+}
+
+/* Contact section */
+.contact {
+    padding: 3rem 2rem;
+    background-color: white;
+    text-align: center;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.contact-text {
+    margin-bottom: 2rem;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-button i {
+    margin-right: 8px;
+    font-size: 1.4rem;
+}
+
+/* Floating WhatsApp Button */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    color: white;
+    text-decoration: none;
+}
+
+.floating-whatsapp i {
+    font-size: 2rem;
+}
+
+.floating-whatsapp:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    background-color: #128C7E;
+}
+
+.floating-whatsapp .tooltip {
+    position: absolute;
+    right: 75px;
+    background-color: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.floating-whatsapp .tooltip::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 8px 0 8px 8px;
+    border-style: solid;
+    border-color: transparent transparent transparent #333;
+}
+
+.floating-whatsapp:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    right: 70px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .tagline {
+        font-size: 1.2rem;
+    }
+    
+    .key-specs {
+        flex-direction: column;
+    }
+    
+    .spec {
+        margin-bottom: 1rem;
+    }
+
+    /* Mobile gallery adjustments */
+    .main-image {
+        height: 300px; /* Shorter height for mobile */
+    }
+
+    .thumbnails {
+        gap: 0.5rem; /* Smaller gap between thumbnails */
+    }
+
+    .thumbnails img {
+        width: 80px; /* Smaller thumbnails */
+        height: 60px;
+    }
+}
